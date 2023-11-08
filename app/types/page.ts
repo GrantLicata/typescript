@@ -1,9 +1,9 @@
+//? BASIC TYPES
 let variable = "hello";
 
 let age = 18;
 
 // Types are implicit until explicitly assigned by ":"
-
 let ageWithType: number = 4;
 
 let testString: string = "This is a string";
@@ -15,32 +15,38 @@ let testStringOrNumber: string | number;
 testStringOrNumber = 4;
 testStringOrNumber = "Four";
 
-// ARRAY
-let names = ["john", "jane", "cameron"];
+//? ARRAYS
 // The type of the array above is implicitly typed as string
+let names = ["john", "jane", "cameron"];
 
-let namesExplicitlyTyped: string[];
 // An array of strings is explicitly typed
+let namesExplicitlyTyped: string[];
 
+// An error occurs when attempting to incorporate a number
 names.push("mike");
 names.push(9);
-// An error occurs when attempting to incorporate a number
 
 let numbers = [11, 22, 33];
 numbers.push(44);
 
+// Union arrays can be specified using "()[]"
 let testStringOrNumberArray: (string | number)[];
 testStringOrNumberArray = [24, 35, "Ninety two", 129];
-// Union arrays can be specified using "()[]"
 
-//OBJECTS
-
+//? OBJECTS
+// Objects are implicitly typed upon generation
 let user = {
   username: "john",
   age: 22,
   isAdmin: false,
 };
-// Objects are implicitly typed upon generation
 
 user.username = "jane";
 user.username = 45;
+
+// Objects can be explicitly typed
+let userObj: {
+  username: string;
+  age: number;
+  isAdmin: boolean;
+};
