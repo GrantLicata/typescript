@@ -50,3 +50,30 @@ let userObj: {
   age: number;
   isAdmin: boolean;
 };
+
+// When objects are explicitly declared they ust follow the content specifications. New object properties can not be included.
+userObj = {
+  username: "john",
+  age: 23,
+  isAdmin: true,
+  phone: 1231231121,
+};
+
+// Object properties can be stated as optional using "?"
+let userObj2: {
+  username: string;
+  age: number;
+  isAdmin: boolean;
+  phone?: string;
+};
+
+//? ANY
+
+// Variables with no initial value or specified type are considered a type of "any"
+let testAny;
+
+testAny = 12;
+testAny = "John";
+testAny = false;
+testAny = {};
+testAny = [];
